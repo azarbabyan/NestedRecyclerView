@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addressLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginTop="0dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/pointsIcon"
+                android:layout_width="16dp"
+                android:layout_height="0dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="5dp"
+                android:src="@drawable/ic_location_dots"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/startAddressTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="6dp"
+                android:gravity="top"
+                android:textColor="@color/colorPrimaryTextDark"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/endAddressTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/pointsIcon"
+                app:layout_constraintTop_toTopOf="@+id/pointsIcon"
+                tools:text="Start Address" />
+
+            <TextView
+                android:id="@+id/endAddressTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/colorPrimaryTextDark"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/pointsIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/pointsIcon"
+                app:layout_constraintTop_toBottomOf="@+id/startAddressTv"
+                tools:text="End Address" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/infoIV"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/ic_info_outline_black_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/infoTextTv"
+            app:tint="@color/colorPrimaryLightTint" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/infoTextTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/infoIV"
+            app:layout_constraintTop_toBottomOf="@+id/addressLayout"
+            tools:text="In 3 min and 17 min from Tsarav Aghbyur to Mamikonyants from Tsarav Aghbyur" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/infoTextTv">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/timeIV"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/timer_ic"
+                app:layout_constraintBottom_toBottomOf="@+id/timeTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/timeTv"
+                app:tint="@color/colorPrimaryLightTint" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/timeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/colorPrimaryTextDark"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/timeIV"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="15 min" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/distIV"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/km_ic"
+                app:layout_constraintBottom_toBottomOf="@+id/distTv"
+                app:layout_constraintStart_toEndOf="@+id/timeTv"
+                app:layout_constraintTop_toTopOf="@+id/distTv"
+                app:tint="@color/colorPrimaryLightTint" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/distTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/colorPrimaryTextDark"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/distIV"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="12 km" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/valueTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans_bold"
+                android:textColor="@color/colorPrimaryTextDark"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="800 $" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
